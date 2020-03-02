@@ -101,5 +101,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		employeeRepository.deleteById(emp.getId());
 		return emp.getId() + " record is deleted.....";
 	}
-
+	
+	public Long empMaxId() {
+		return employeeRepository.empMaxId();
+	}
 }

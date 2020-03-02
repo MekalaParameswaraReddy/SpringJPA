@@ -24,4 +24,6 @@ public interface EmployeeDAO {
 	public long getCount();
 
 	public String deleteEmployee(Employee emp);
+	
+	public Long empMaxId();
 }

@@ -61,4 +61,9 @@ public class EmployeeController {
 	public String deleteEmployee(@RequestBody Employee emp) {
 		return employeeService.deleteEmployee(emp);
 	}
+	
+	@GetMapping(value = "/employeeMaximumId")
+	public Long empMaxId() {
+		return employeeService.empMaxId();
+	}
 }

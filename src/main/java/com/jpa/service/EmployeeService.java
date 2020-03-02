@@ -51,4 +51,8 @@ public class EmployeeService {
 	public String deleteEmployee(Employee emp) {
 		return employeeDAO.deleteEmployee(emp);
 	}
+	
+	public Long empMaxId() {
+		return employeeDAO.empMaxId();
+	}
 }
