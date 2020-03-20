@@ -103,6 +103,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 	
 	public Long empMaxId() {
+		Employee emp = employeeRepository.getEmp(13);
+		System.out.println("===> " + emp.getFirstname() + " " + emp.getLastName());
 		return employeeRepository.empMaxId();
 	}
 }
