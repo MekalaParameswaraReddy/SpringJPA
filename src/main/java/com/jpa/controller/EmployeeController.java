@@ -66,4 +66,14 @@ public class EmployeeController {
 	public Long empMaxId() {
 		return employeeService.empMaxId();
 	}
+	
+	@GetMapping(value = "/testRepository")
+	public void testRepository(){
+		employeeService.testRepository();
+	}
+	
+	@DeleteMapping(value = "/deleteEmployeeWithInCondition/{gender}/{names}")
+	public String deleteEmpNamesWithInCondition(@PathVariable String gender, @PathVariable String names){
+		return employeeService.deleteEmpNamesWithInCondition(gender, names);
+	}
 }

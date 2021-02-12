@@ -31,4 +31,8 @@ public class PersonService {
 	public List<Person> getAllPersons(){
 		return personDAO.getAllPersons();
 	}
+	
+	public void update(){
+		personDAO.update();
+	}
 }

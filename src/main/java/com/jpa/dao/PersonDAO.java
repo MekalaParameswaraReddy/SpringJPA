@@ -14,5 +14,7 @@ public interface PersonDAO {
 	public Person getPersonByAadharID(int id);
 	
 	public List<Person> getAllPersons();
+	
+	public void update();
 
 }

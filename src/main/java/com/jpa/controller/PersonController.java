@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jpa.entity.Employee;
@@ -34,5 +36,9 @@ public class PersonController {
 	public List<Person> getAllPersons() {
 		return personService.getAllPersons();
 	}
-	
+	@RequestMapping(value = "/multiupdate", method = RequestMethod.POST, produces ="application/json")
+	//@RequestBody
+	public void update(){
+		personService.update();
+	}
 }

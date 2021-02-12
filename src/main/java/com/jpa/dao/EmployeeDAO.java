@@ -26,4 +26,8 @@ public interface EmployeeDAO {
 	public String deleteEmployee(Employee emp);
 	
 	public Long empMaxId();
+	
+	public void testRepository();
+	
+	public String deleteEmpNamesWithInCondition(String gender, String names);
 }

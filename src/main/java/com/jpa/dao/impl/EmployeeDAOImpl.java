@@ -107,4 +107,22 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		System.out.println("===> " + emp.getFirstname() + " " + emp.getLastName());
 		return employeeRepository.empMaxId();
 	}
+	
+	@Override
+	public void testRepository() {
+		List list = new ArrayList();
+		list.add(33);
+		list.add(12);
+		list.add(13);
+		List l = employeeRepository.getEmpNamesWithInCondition(list);		
+	}
+	
+	@Override
+	public String deleteEmpNamesWithInCondition(String gender, String names) {
+		List<String> li = new ArrayList<String>();
+		li.add(names);
+		li.add("Manu12");
+		employeeRepository.deleteEmpNamesWithInCondition(gender);
+		return "success";
+	}
 }

@@ -19,18 +19,22 @@ import com.jpa.repository.PersonRepository;
 public class PersonDAOImpl implements PersonDAO{
 	
 	@Autowired
-	PersonRepository PersonRepository;	
+	PersonRepository personRepository;	
 	
 	@Override
 	public Person getPersonByAadharID(int id) {
-		 Optional<Person> optional = PersonRepository.findById((long) id);
+		 Optional<Person> optional = personRepository.findById((long) id);
 		return optional.get();
 	}
 	
 	@Override
 	public List<Person> getAllPersons() {
-		return PersonRepository.findAll();
+		return personRepository.findAll();
 	}
 	
+	public void update(){
+		personRepository.updateWithInCondition(2,12343);
+		System.out.println("=== === update");
+	}
 	
 }

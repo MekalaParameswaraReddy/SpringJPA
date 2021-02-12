@@ -24,7 +24,7 @@ public class EmployeeService {
 	@Qualifier("empDaoImpl")
 	EmployeeDAO employeeDAO;
 
-	public List<Employee> findByFirstName(String name) {
+	public List<Employee> findByFirstName(String name) {		
 		return employeeDAO.findByFirstName(name);
 	}
 
@@ -54,5 +54,13 @@ public class EmployeeService {
 	
 	public Long empMaxId() {
 		return employeeDAO.empMaxId();
+	}
+	
+	public void testRepository(){
+		employeeDAO.testRepository();
+	}
+	
+	public String deleteEmpNamesWithInCondition(String gender, String names){
+		return employeeDAO.deleteEmpNamesWithInCondition(gender, names);
 	}
 }
